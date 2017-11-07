@@ -75,7 +75,7 @@ namespace detail
         std_dev = std::sqrt(std_dev) / std::sqrt(static_cast<long double>(size));
 
         // Should keep 75% of values according to Chebyshev's inequality
-        return std::make_pair(avg - 2 * std_dev, avg + 2 * std_dev);
+        return std::make_pair(avg - std_dev, avg + std_dev);
     }
 
     template<typename BidirectionalIterator, typename Compare>
